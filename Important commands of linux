@@ -1,0 +1,15 @@
+# Head command for read starting top 10 lines
+head                                                              
+ex: head /etc/passwd                                              (for read top 10 line without numbers)
+ex: head /etc/passwd |nl  OR head /etc/passwd | cat -n            (for read top 10 line with numbers)
+ex: head -n15 /etc/passwd |nl                                     (for read 15 lines with numbers)
+
+# Tail command for read bottom 10 lines 
+ex: tail /etc/passwd                                              (for read bottom 10 line without numbers)
+ex: tail /etc/passwd |nl                                          (for read bottom 10 lines with numbers)
+ex: tail -n25 /etc/passwd |nl                                     (for read bottom 25 lines with numbers)
+
+# Now we have to read 20 to 25 lines only then command is 
+ex: head -n25 /etc/passwd |nl| tail -n5                           (for read 21 t0 25 lines only)
+
+# Echo command 
