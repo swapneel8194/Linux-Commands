@@ -1,0 +1,47 @@
+ls                                     (for listing)
+ls -l                                  (long list command)
+l.                                     (for show hidden data)
+l. -l                                  (list show hidden data)
+ls -a                                  (show hidden data & allready store data)
+ls -al                                 (show hidden & stored data in list)
+
+touch ( for create a file )                     
+                                     # touch command for 2 ways 
+                                     1. to create a file 
+                                     2. to upadate the file 
+
+stat (for time stat check command)
+date (for show date )
+cal (show calender)
+
+mkdir  (to create folder)           # to create a folder or directory
+                                    # If we have create at a time two folder then 
+mkdir old \new (command)
+mkdir -p laptop \desktop            (crete 2 folder -p for parent directory)
+
+cat                                 # cammand for number of ways 
+                                    1. to check file 
+                                    2. to write in file 
+                                    3. to read data in file
+cat > india.txt                     (for write in file & save=ctlr+D)
+cat india.txt                       (for read data in file)
+cat >> india.txt                    (for write in same file save=ctlr+D)
+cat -n india.txt                    (for read data with numbers)
+nl india.txt                        (show with numbers)
+tac india.txt                       (for read or move 1st line in last line)
+ex: cat /etc/passwd                 (for read data in folder)
+ex: cat -n /etc/passwd              (for read date in line numbers)
+
+| (Pipe)                            #pipe command for read output data of current file
+ex: cat india.txt | nl
+
+; (semicolon)                       #semicolon use for to create multiple operation like folder,file and ls etc
+ex: mkdir keyboard ; cd keyboard ; touch data ; ls
+
+
+
+
+
+
+
+                
