@@ -18,5 +18,34 @@ ex: echo "hello swapnil" >> india.txt                             (for rewrite i
 ex: tail -n25 /etc/passwd |nl| tail -5 >> india.txt               (for other data send to a specific file and read)
 ex: echo > india.txt                                              (for blank file)
 
+vim command  (IMP)                                                # vim (editor)
+1. insert mode (press "i" for to write)
+2. esc mode (press "esc" for delete word line & save)
+3. command mode (for write)
+
+  ex: vim /etc/passwd 
+      in esc mode we want to delete single one word for press "x" button
+      in ecc mode we want to delete single line for press "dw" 
+      in esc mode we want to delete one or more line ex : "5dd" press 
+      in esc mode we want to down at last curser press "shift+G"
+      in esc mode we want curser at top press "two times GG"
+      in esc mode we want to undo press "u"
+      in esc mode we want to close without save press "shiftZZ"
+      in esc mode we want new line in between them press "O"
+      in esc mode we want in all data with numbers press "shift:se nu" & return for without number press "shift: se nonu"
+      in esc mode we want to save press "shift:wq!"
+
+grep command (IMP)                                            # grep command for search specific file in folder 
+                                                              define: The grep command in Linux is a powerful tool for 
+                                                                      searching text within files or input streams.
+  ex: grep deamon /etc/passwd                                 (show all deamon file in that folder)
+  ex: grep -n daemon /etc/passwd                              (show all deamon file with numbers -n=option, deamon=argument, /etc/passwd=file name or path name
+  ex: grep -nio daemon /etc/passwd                            (show only specific daemon name)
+  ex: grep -ni ^daemon /etc/passwd                            (show this daemon in starting of file)
+
+
+
+
+
 
 
