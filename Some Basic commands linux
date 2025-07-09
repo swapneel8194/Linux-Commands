@@ -16,8 +16,8 @@ cal (show calender)
 
 mkdir  (to create folder)           # to create a folder or directory
                                     # If we have create at a time two folder then 
-mkdir old \new (command)
-mkdir -p laptop \desktop            (crete 2 folder -p for parent directory)
+  ex: mkdir old \new (command)
+  ex: mkdir -p laptop \desktop      (crete 2 folder -p for parent directory)
 
 cat                                 # cammand for number of ways 
                                     1. to check file 
@@ -29,14 +29,49 @@ cat >> india.txt                    (for write in same file save=ctlr+D)
 cat -n india.txt                    (for read data with numbers)
 nl india.txt                        (show with numbers)
 tac india.txt                       (for read or move 1st line in last line)
-ex: cat /etc/passwd                 (for read data in folder)
-ex: cat -n /etc/passwd              (for read date in line numbers)
+   ex: cat /etc/passwd              (for read data in folder)
+   ex: cat -n /etc/passwd           (for read date in line numbers)
 
 | (Pipe)                            #pipe command for read output data of current file
 ex: cat india.txt | nl
 
 ; (semicolon)                       #semicolon use for to create multiple operation like folder,file and ls etc
 ex: mkdir keyboard ; cd keyboard ; touch data ; ls
+
+rm command                          #rm command for remove file 
+rm india.txt
+rm -ra1                             (for remove folder or directory r= recursive)
+rm -f india.txt                     (for remove file forcefully f=forcefully)
+rm -rf                              (for remove folder or directory forcefully direct delete)
+rm -rvf                             (for showing delete file r=remove,v=verbose,f=forcefully)
+  ex: cd /tmp
+  rm -rvf*                          (for delete all data of specific folder (*) denote all data)
+rm -rvf /tmp/*                      (second method for delete from root)
+
+rename command                      #rename command 
+   ex: mkdir india
+          ls
+        india
+rename india bharat india           (rename india=oldname, bharat=newname, india=oldname this is format)
+
+cp command                          #cp command copy command 
+  ex: touch abc 
+      mkdir india
+      ls 
+      abc india
+      cp abc india/                 (abc file copy in india folder)
+
+  ex: cp -r nagpur india
+      ls
+      india/
+      nagpur                        (folder copy in other folder)
+
+  ex: cp -rvf a1 b1 c1 india        (copy all data in india folder)
+  ex: cd /etc 
+      ls 
+      show all data
+      cp -rvf * /root/india         (copy all data of etc folder in india folder of root user)
+
 
 
 
