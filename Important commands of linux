@@ -12,4 +12,11 @@ ex: tail -n25 /etc/passwd |nl                                     (for read bott
 # Now we have to read 20 to 25 lines only then command is 
 ex: head -n25 /etc/passwd |nl| tail -n5                           (for read 21 t0 25 lines only)
 
-# Echo command 
+# Echo command for write & rewrite in some specific file and sent to other destination & also use for to blank file
+ex: echo "welcome to linux" > india.txt                           (for write code in a file)
+ex: echo "hello swapnil" >> india.txt                             (for rewrite in same file)
+ex: tail -n25 /etc/passwd |nl| tail -5 >> india.txt               (for other data send to a specific file and read)
+ex: echo > india.txt                                              (for blank file)
+
+
+
