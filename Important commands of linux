@@ -44,6 +44,40 @@ grep command (IMP)                                            # grep command for
   ex: grep -ni ^daemon /etc/passwd                            (show this daemon in starting of file)
 
 
+Find Command                                                  # find command synax = find location option argument
+   ex: touch /etc/india                                       (create a file)
+       mkdir /opt/nagpur                                      (create a folder)
+find / -name india                                             (command for find india file)
+
+#if we have to find all readable, writable and excutable data 
+1. find / -readable
+2. find / -writable
+3. find / -excutable
+
+                                                              #if we have to check specific file size
+ex: du -sh /india                                             (show actual size of file)
+ex: find / -size 20M                                          (show size of all 20Mb file)
+
+1.ex: # create a user 
+     useradd harry                                             (create a user)
+     su - harry                                                (login user)
+     touch a1 b1 c1                                            (create file)
+     mkdir a2 b2 c2                                            (create directory)
+     exit                                                      (back to root user)
+find / -user harry                                             (command for find harry user)
+mkdir /userdata                                                (create directory for all data of harry user copy in userdata)
+find / -user harry -exec cp -rf {} / userdata \;               
+cd /userdata
+ls
+harry                                                          (command for all data of harry user in userdata folder in root)
+
+ 2.ex: mkdir /data                                             (create folder and then create file and one folder
+       cd /data
+       touch abc
+       mkdir abc
+find /data/* -name abc
+
+
 
 
 
