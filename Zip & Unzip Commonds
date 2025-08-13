@@ -1,0 +1,106 @@
+# Zip & Unzip method 
+
+# We are using TAR for creating zip file
+It has three method 
+      1.gunzip 
+      2.bunzip
+      3.xz 
+
+# Syntax : tar option archive folder file & folder
+
+ Ex: create new directory
+     mkdir /mydata
+     cd /mydata 
+     ll
+     0                                                                  (no data available in dir)
+
+
+Ex: # we have in our system etc folder and first check its size 
+      du -sh /etc
+      27M
+      we have to archive this folder or dir
+ 
+C:  tar -cvf redhat.tar /etc                                                (an archive will be created)
+    ls 
+    redhat.tar                                                              (shown this file archive)
+    du -sh redhat.tar                                                       (size check for this file)
+    26M
+
+# Now we have to compress redhat.tar file & want to see content then we need to extract it
+C:  tar -xvf redhat.tar                                                     (show data etc folder and extract )
+
+# check for listing 
+C:  tar -tvf redhat.tar                                                     (show data listing)
+
+# Now we want to extract in other folder or dir 
+C: ex: tar -xvf redhat.tar -C /tmp/
+       ls /tmp
+       etc                                                                  (show in tmp folder)
+
+# GUNZip Method
+du -sh redhat.tar
+26M                                                                         (show size )
+C:  tar -zcvf redhat.tar.gz /etc                                            (zcvf=create,compress,archive gz=compress method)
+    du -sh redhat.tar redhat.tar.gz
+              26M         8.7M                                              (show size)
+
+
+# Bunzip method
+C:  tar -jcvf redhat.tar.bz2 /etc                                           (jcvf=create,compress,archive gz=compress method)
+    du -sh redhat.tar.bz2
+          7.7M
+
+
+#XZ method
+C:  tar -Jcvf redhat.tar.xz /etc                                            (Jcvf=create,compress,archive gz=compress method) using capital J
+    du -sh redhat.tar.xz
+          5.3M
+
+
+
+# If you want to extract now then you will have to delete the "etc" folder
+GZ method:
+  rm -rf etc
+  tar -zxvf redhat.tar.gz
+
+Bunzip method:
+  rm -rf etc
+  tar -jxvf redhat.tar.b2z
+
+XZ method:
+  rm -rf etc
+  tar -Jxvf redhat.tar.xz
+
+                                       # Note: gz: zcvf = It will be compressed and archived as well
+                                               bz: jcvf = It will be compressed and archived as well
+                                               xz: Jcvf = It will be compressed and archived as well
+
+
+# zip 
+
+ex: zip swapnil.zip /etc
+    ls
+    swapnil.zip
+    du -sh swapnil.zip
+    4.0K
+
+# Unzip
+ex: unzip swapnil.zip
+    ls
+    swapnil.zip
+
+# If we have to check zip pacakge
+C:  rpm -q zip
+    zip -3.0-11.e17.x86_64
+
+# If we have to check unzip pacakge
+C:  rpm -q unzip
+    unzip-6.0-21.e17.x86_64
+
+
+
+  
+
+
+
+
